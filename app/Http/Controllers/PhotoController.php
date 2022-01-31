@@ -29,6 +29,9 @@ class PhotoController extends Controller
 
     public function photo()
     {
+        // $content = Storage::url('public/photo.jpg');
+        // $photo = Storage::put('public/file.jpg', $content);
+        // return $photo;
         return view('photo');
     }
 
@@ -48,7 +51,8 @@ class PhotoController extends Controller
 
     public function photoSave(Request $request)
     {
-        $path = $request->photo->storeAs('app/public', 'file.jpg');
+        $path = $request->photo->storeAs('public', 'file.jpg');
+        //$path = Storage::put('public/file.jpg', $request->photo);
         return $path;
     }
 
