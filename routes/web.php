@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\DocumentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,9 @@ Route::get('/', function () {
 
 Route::get('/photo', [PhotoController::class, 'photo']);
 Route::post('/photo', [PhotoController::class, 'photoSave']);
+
+Route::get('/images', [ImagesController::class, 'images']);
+Route::post('/images', [ImagesController::class, 'saveImages']);
+
+Route::get('/document', [DocumentController::class, 'document']);
+Route::post('/document', [DocumentController::class, 'saveDocument']);
