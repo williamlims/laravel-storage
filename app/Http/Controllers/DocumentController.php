@@ -23,7 +23,7 @@ class DocumentController extends Controller
 
     public function saveDocument(Request $request)
     {
-        $path = $request->document->storeAs('public/documents', $request->document->getClientOriginalName());
+        $path = $request->file->storeAs('public/documents', $request->file->getClientOriginalName());
         return $path;
     }
 

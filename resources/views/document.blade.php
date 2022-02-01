@@ -9,8 +9,8 @@
 <body>
     <form action="/document" method="POST" enctype="multipart/form-data">
     @csrf
-    <label for="document">File</label><br>
-    <input type="file" name="document" id="document">
+    <label for="file">File</label><br>
+    <input type="file" name="file" id="file" accept=".pdf">
     <button type="submit">ENVIAR</button>
     </form>
 </body>
